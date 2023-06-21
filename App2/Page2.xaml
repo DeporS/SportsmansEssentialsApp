@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.Page2"
+             Title="BMI Calculator">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="waist.png"
+                WidthRequest="300"
+                HeightRequest="300"/>
+            <BoxView HeightRequest="10"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Entry x:Name="kgEntry" Placeholder="Weight (kg)" Keyboard="Numeric" HorizontalTextAlignment="Center"/>
+                <BoxView WidthRequest="10"/>
+                <Entry x:Name="ageEntry" Placeholder="Age" Keyboard="Numeric" HorizontalTextAlignment="Center"/>
+                <BoxView WidthRequest="10"/>
+                <Entry x:Name="mEntry" Placeholder="Height (cm)" Keyboard="Numeric" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <BoxView HeightRequest="15"/>
+            <Button x:Name="calButton" Text="Calculate" HorizontalOptions="Center" Clicked="calButton_Clicked"/>
+            <BoxView HeightRequest="25"/>
+            <Label x:Name="bmiOut" Text="" FontSize="25" HorizontalOptions="Center"/>
+            <BoxView HeightRequest="15"/>
+            <StackLayout x:Name="over20Box" Orientation="Horizontal" HorizontalOptions="Center" IsVisible="False" Spacing="0">
+                <BoxView BackgroundColor="Red" HeightRequest="30" WidthRequest="15"/>
+                <BoxView BackgroundColor="Orange" HeightRequest="30" WidthRequest="30"/>
+                <BoxView BackgroundColor="Yellow" HeightRequest="30" WidthRequest="15"/>
+                <BoxView BackgroundColor="Green" HeightRequest="30" WidthRequest="75"/>
+                <BoxView BackgroundColor="Yellow" HeightRequest="30" WidthRequest="45"/>
+                <BoxView BackgroundColor="Orange" HeightRequest="30" WidthRequest="45"/>
+                <BoxView BackgroundColor="Red" HeightRequest="30" WidthRequest="45"/>
+                <BoxView BackgroundColor="Brown" HeightRequest="30" WidthRequest="30"/>
+            </StackLayout>
+            <BoxView x:Name="setBox" BackgroundColor="Black" HeightRequest="40" WidthRequest="5" HorizontalOptions="Center" Margin="0,-40,0,0" IsVisible="False"/>
+            <BoxView HeightRequest="10"/>
+            <Label x:Name="bmiText" Text="" FontSize="25" HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

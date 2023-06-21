@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.Page3"
+             Title="Your Personal Trainer">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Image Source="thinking.png"
+                    WidthRequest="300"
+                    HeightRequest="300" VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Label x:Name="centralText" Text="" Margin="20" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <StackLayout VerticalOptions="End">
+                    <Entry x:Name="userInput" Placeholder="Ask me anything!" HorizontalTextAlignment="Center" HorizontalOptions="Center" WidthRequest="300"/>
+                    <Button x:Name="But1" Text="Send" Clicked="Button_Clicked" HorizontalOptions="Center"/>
+                    <Button x:Name="hisBut" Text="History" HorizontalOptions="Center" Clicked="NavigateToHisPage" IsVisible="false"/>
+                    <BoxView HeightRequest="40"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.RecPage"
+             Title="Recipes">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" Margin="7,0">
+                    <Label Text="Fish" FontSize="15" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <CheckBox x:Name="fish" Color="DeepSkyBlue" CheckedChanged="OnTagFilterChanged" HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" Margin="7,0">
+                    <Label Text="Chicken" FontSize="15" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <CheckBox x:Name="chicken" Color="DeepSkyBlue" CheckedChanged="OnTagFilterChanged" HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" Margin="7,0">
+                    <Label Text="Pork" FontSize="15" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <CheckBox x:Name="pork" Color="DeepSkyBlue" CheckedChanged="OnTagFilterChanged" HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" Margin="7,0">
+                    <Label Text="Beef" FontSize="15" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <CheckBox x:Name="beef" Color="DeepSkyBlue" CheckedChanged="OnTagFilterChanged" HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" Margin="7,0">
+                    <Label Text="Vegetarian" FontSize="15" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <CheckBox x:Name="vegetarian" Color="DeepSkyBlue" CheckedChanged="OnTagFilterChanged" HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" Margin="7,0">
+                    <Label Text="Vegan" FontSize="15" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <CheckBox x:Name="vegan" Color="DeepSkyBlue" CheckedChanged="OnTagFilterChanged" HorizontalOptions="Center"/>
+                </StackLayout>
+                
+            </StackLayout>
+            <ListView x:Name="recipeListView" ItemSelected="OnRecipeSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding Name}"
+                       Detail="{Binding Description}"
+                       ImageSource="{Binding Icon}"
+                       TextColor="#000000"
+                       DetailColor="#666666" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

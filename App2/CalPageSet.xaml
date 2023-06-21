@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.CalPageSet">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Margin="25">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Your height:" VerticalOptions="Center"/>
+                <Entry x:Name="heightEntry" WidthRequest="50" VerticalOptions="Center" HorizontalOptions="Start" Keyboard="Numeric"/>
+                <Label Text="cm" VerticalOptions="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Your age:" VerticalOptions="Center"/>
+                <Entry x:Name="ageEntry" WidthRequest="50" VerticalOptions="Center" HorizontalOptions="Start" Keyboard="Numeric"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Your weight:" VerticalOptions="Center"/>
+                <Entry x:Name="weightEntry" WidthRequest="50" VerticalOptions="Center" HorizontalOptions="Start" Keyboard="Numeric"/>
+                <Label Text="kg" VerticalOptions="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Your ideal weight:" VerticalOptions="Center"/>
+                <Entry x:Name="goalEntry" WidthRequest="50" VerticalOptions="Center" HorizontalOptions="Start" Keyboard="Numeric"/>
+                <Label Text="kg" VerticalOptions="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Time to lose/gain weight:" VerticalOptions="Center"/>
+                <Entry x:Name="monthsEntry" WidthRequest="50" VerticalOptions="Center" HorizontalOptions="Start" Keyboard="Numeric"/>
+                <Label Text="months" VerticalOptions="Center"/>
+            </StackLayout>
+            <Label Text="How often do you train?"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center">
+                <CheckBox x:Name="act1" Color="DeepSkyBlue" CheckedChanged="Activity1" VerticalOptions="Center"/>
+                <Label Text="Sedentary lifestyle" FontSize="15" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center">
+                <CheckBox x:Name="act2" Color="DeepSkyBlue" CheckedChanged="Activity2" VerticalOptions="Center"/>
+                <Label Text="Light training 1-3 times a week" FontSize="15" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center">
+                <CheckBox x:Name="act3" Color="DeepSkyBlue" CheckedChanged="Activity3" VerticalOptions="Center"/>
+                <Label Text="Moderate training 3-5 times a week" FontSize="15" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center">
+                <CheckBox x:Name="act4" Color="DeepSkyBlue" CheckedChanged="Activity4" VerticalOptions="Center"/>
+                <Label Text="Intensive training 6-7 times a week" FontSize="15" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center">
+                <CheckBox x:Name="act5" Color="DeepSkyBlue" CheckedChanged="Activity5" VerticalOptions="Center"/>
+                <Label Text="Very intensive training every day" FontSize="15" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <Button Text="Set" HorizontalOptions="Center" Clicked="SetButton"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

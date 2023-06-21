@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             x:Class="App2.CalPage"
+             Title="Calories Counter">
+    <ContentPage.Content>
+        <StackLayout>
+            <zxing:ZXingScannerView x:Name="scanner" IsScanning="True" IsVisible="False" OnScanResult="ScanFun"/>
+            <Image x:Name="fruitImage" Source="fruit.png" WidthRequest="250" HeightRequest="250"/>
+            <Label Text="Calories" FontSize="20" HorizontalOptions="Center"/>
+            <Label x:Name="calProgress" Text="" FontSize="20" HorizontalOptions="Center"/>
+            <ProgressBar x:Name="caloriesProgressBar" WidthRequest="300" VerticalOptions="Center" ProgressColor="LightGreen" BackgroundColor="LightGray" HorizontalOptions="Center" Progress="0" />
+            <Label Text="Protein" FontSize="20" HorizontalOptions="Center"/>
+            <Label x:Name="proProgress" Text="" FontSize="20" HorizontalOptions="Center"/>
+            <ProgressBar x:Name="proteinProgressBar" WidthRequest="300" VerticalOptions="Center" ProgressColor="Beige" BackgroundColor="LightGray" HorizontalOptions="Center" Progress="0" />
+            <Label Text="Fat" FontSize="20" HorizontalOptions="Center"/>
+            <Label x:Name="fatProgress" Text="" FontSize="20" HorizontalOptions="Center"/>
+            <ProgressBar x:Name="fatProgressBar" WidthRequest="300" VerticalOptions="Center" ProgressColor="Yellow" BackgroundColor="LightGray" HorizontalOptions="Center" Progress="0" />
+            <Label Text="Carbohydrates" FontSize="20" HorizontalOptions="Center"/>
+            <Label x:Name="carbProgress" Text="" FontSize="20" HorizontalOptions="Center"/>
+            <ProgressBar x:Name="carbProgressBar" WidthRequest="300" VerticalOptions="Center" ProgressColor="Black" BackgroundColor="LightGray" HorizontalOptions="Center" Progress="0" />
+            <Label x:Name="scannedText"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button x:Name="addBut" Text="Add" VerticalOptions="Center" Clicked="AddItem" />
+                <Button x:Name="scanBut" Text="Scan" VerticalOptions="Center" Clicked="ScanItem" IsEnabled="True"/>
+                <Button x:Name="resetBut" Text="Reset" VerticalOptions="Center" Clicked="Reset"/>
+                <Button x:Name="setBut" Text="Set" VerticalOptions="Center" Clicked="SetCal"/>
+                <Button x:Name="cancelBut" Text="Cancel" VerticalOptions="Center" Clicked="CancelScaner" IsVisible="False"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

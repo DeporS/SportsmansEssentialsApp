@@ -1,0 +1,81 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:local="clr-namespace:App2"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.Page1"
+             Title="Gym Stats">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="benchpress.png"
+                           WidthRequest="200"
+                           HeightRequest="200"
+                           HorizontalOptions="Start"/>
+                    <StackLayout>
+                        <Label Text="Bench Press" FontSize="Large"/>
+                        <BoxView HeightRequest="10" />
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="One rep max" FontSize="12"/>
+                            <Entry x:Name="BP_PR" Placeholder="" FontSize="12" WidthRequest="40" Keyboard="Numeric" Margin="0,-17,0,0" HorizontalOptions="StartAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                            <Label Text="kg" FontSize="12" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="workout.png"
+                           WidthRequest="200"
+                           HeightRequest="200"
+                           HorizontalOptions="Start"/>
+                    <StackLayout>
+                        <Label Text="Bicep Curl" FontSize="Large"/>
+                        <BoxView HeightRequest="10" />
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Weight" FontSize="12"/>
+                            <Entry x:Name="BC_W" Placeholder="" FontSize="12" WidthRequest="40" Keyboard="Numeric" Margin="0,-17,0,0" HorizontalOptions="StartAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                            <Label Text="kg" FontSize="12" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+                        </StackLayout>
+                        <BoxView HeightRequest="5" />
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Reps" FontSize="12"/>
+                            <Entry x:Name="BC_R" Placeholder="" FontSize="12" WidthRequest="40" Keyboard="Numeric" Margin="0,-17,0,0" HorizontalOptions="StartAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="pushup.png"
+                           WidthRequest="200"
+                           HeightRequest="200"
+                           HorizontalOptions="Start"/>
+                    <StackLayout>
+                        <Label Text="Push-ups" FontSize="Large"/>
+                        <BoxView HeightRequest="10" />
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Reps" FontSize="12"/>
+                            <Entry x:Name="PU_R" Placeholder="" FontSize="12" WidthRequest="40" Keyboard="Numeric" Margin="0,-17,0,0" HorizontalOptions="StartAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="treadmill.png"
+                           WidthRequest="200"
+                           HeightRequest="200"
+                           HorizontalOptions="Start"/>
+                    <StackLayout>
+                        <Label Text="Treadmill" FontSize="Large"/>
+                        <BoxView HeightRequest="10" />
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Distance" FontSize="12"/>
+                            <Entry x:Name="T_D" Placeholder="" FontSize="12" WidthRequest="40" Keyboard="Numeric" Margin="0,-17,0,0" HorizontalOptions="StartAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                            <Label Text="km" FontSize="12" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Time" FontSize="12"/>
+                            <Entry x:Name="T_T" Placeholder="" FontSize="12" WidthRequest="40" Keyboard="Numeric" Margin="0,-17,0,0" HorizontalOptions="StartAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                            <Label Text="min" FontSize="12" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
